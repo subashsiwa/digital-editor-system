@@ -68,3 +68,92 @@
 git clone https://github.com/YaEvgeshka/digital-editor-system.git
 cd digital-editor-system
 # Следуйте инструкциям в разделе Установка
+🚀 Быстрый старт
+Требования
+
+    Python 3.8+
+
+    Django 5.2.6
+
+    SQLite (для разработки) / PostgreSQL (для продакшена)
+
+Установка за 5 минут
+# 1. Клонирование репозитория
+git clone https://github.com/YaEvgeshka/digital-editor-system.git
+cd digital-editor-system
+
+# 2. Создание виртуального окружения
+python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+# или
+venv\Scripts\activate     # Windows
+
+# 3. Установка зависимостей
+pip install -r requirements.txt
+
+# 4. Настройка базы данных
+python manage.py migrate
+
+# 5. Создание суперпользователя
+python manage.py createsuperuser
+
+# 6. Запуск сервера разработки
+python manage.py runserver
+После этого откройте http://localhost:8000 в браузере.
+⚙️ Установка
+Подробная установка для разработки
+1. Подготовка окружения
+# Клонирование репозитория
+git clone https://github.com/YaEvgeshka/digital-editor-system.git
+cd digital-editor-system
+
+# Создание виртуального окружения
+python -m venv venv
+
+# Активация окружения (Linux/MacOS)
+source venv/bin/activate
+
+# Активация окружения (Windows)
+venv\Scripts\activate
+2. Установка зависимостей
+# Обновление pip
+pip install --upgrade pip
+
+# Установка зависимостей
+pip install -r requirements.txt
+
+# Или установка в режиме разработки
+pip install -e .
+3. Настройка базы данных
+# Применение миграций
+python manage.py migrate
+
+# Создание фикстур с тестовыми данными
+python manage.py create_test_data  # Если есть management command
+4. Создание администратора
+python manage.py createsuperuser
+Следуйте инструкциям в терминале для создания учетной записи администратора.
+5. Запуск сервера
+# Стандартный запуск
+python manage.py runserver
+
+# Запуск на определенном порту
+python manage.py runserver 8080
+
+# Запуск на всех интерфейсах
+python manage.py runserver 0.0.0.0:8000
+Настройка для продакшена
+Настройки базы данных (config/settings.py)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'digital_editor',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+Настройки статических файлов
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
