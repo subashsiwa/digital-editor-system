@@ -70,3 +70,33 @@ cd digital-editor-system
 # Следуйте инструкциям в разделе Установка
 
 ## 🚀 Быстрый старт
+
+### Требования
+- Python 3.8+
+- Django 5.2.6
+- SQLite (для разработки) / PostgreSQL (для продакшена)
+
+### Установка за 5 минут
+
+```bash
+# 1. Клонирование репозитория
+git clone https://github.com/YaEvgeshka/digital-editor-system.git
+cd digital-editor-system
+
+# 2. Создание виртуального окружения
+python -m venv venv
+source venv/bin/activate  # Linux/MacOS
+# или
+venv\Scripts\activate     # Windows
+
+# 3. Установка зависимостей
+pip install -r requirements.txt
+
+# 4. Настройка базы данных
+python manage.py migrate
+
+# 5. Создание суперпользователя
+python manage.py createsuperuser
+
+# 6. Запуск сервера разработки
+python manage.py runserver
