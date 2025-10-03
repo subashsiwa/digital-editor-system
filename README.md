@@ -64,6 +64,7 @@
 | Автор | `author1` | `testpass123` | Создание статей |
 
 ### Локальный запуск демо
+
 ```bash
 git clone https://github.com/YaEvgeshka/digital-editor-system.git
 cd digital-editor-system
