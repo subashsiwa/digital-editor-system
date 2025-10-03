@@ -1,0 +1,28 @@
+{% extends 'journal/base.html' %}
+
+{% block title %}Личный кабинет - Цифровая редакция{% endblock %}
+
+{% block content %}
+<h1>Личный кабинет</h1>
+<p>Добро пожаловать, {{ user.get_full_name|default:user.username }} ({{ user.get_role_display }})!</p>
+
+<h2>Ваши статьи</h2>
+
+{% for article in articles %}
+<div class="article">
+    <h3>{{ article.title }}</h3>
+    <p><strong>Статус:</strong> {{ article.get_status_display }}</p>
+    <p><strong>Рубрика:</strong> {{ article.category.name|default:"Без рубрики" }}</p>
+    <p><strong>Создана:</strong> {{ article.created_at|date:"d.m.Y H:i" }}</p>
+    <a href="{% url 'article_detail' article.id %}">Просмотреть</a>
+</div>
+{% empty %}
+<p>У вас пока нет статей.</p>
+{% endfor %}
+
+{% if user.is_author %}
+<div style="margin-top: 30px;">
+    <a href="{% url 'create_article' %}" class="button">Создать новую статью</a>
+</div>
+{% endif %}
+{% endblock %}

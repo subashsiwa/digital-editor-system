@@ -1,0 +1,20 @@
+{% extends 'journal/base.html' %}
+
+{% block title %}Главная - Цифровая редакция{% endblock %}
+
+{% block content %}
+<h1>Последние публикации</h1>
+
+{% for article in articles %}
+<div class="article">
+    <h2>{{ article.title }}</h2>
+    <p><strong>Автор:</strong> {{ article.author.get_full_name|default:article.author.username }}</p>
+    <p><strong>Рубрика:</strong> {{ article.category.name|default:"Без рубрики" }}</p>
+    <p><strong>Опубликовано:</strong> {{ article.created_at|date:"d.m.Y H:i" }}</p>
+    <p>{{ article.content|truncatewords:50 }}</p>
+    <a href="{% url 'article_detail' article.id %}">Читать далее</a>
+</div>
+{% empty %}
+<p>Пока нет опубликованных статей.</p>
+{% endfor %}
+{% endblock %}

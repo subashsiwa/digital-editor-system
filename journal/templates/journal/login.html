@@ -1,0 +1,29 @@
+{% extends 'journal/base.html' %}
+
+{% block title %}Вход - Цифровая редакция{% endblock %}
+
+{% block content %}
+<h1>Вход в систему</h1>
+
+{% if form.errors %}
+<p>Неверное имя пользователя или пароль. Попробуйте снова.</p>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="username">Имя пользователя:</label>
+        <input type="text" name="username" id="username" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" id="password" required>
+    </div>
+    
+    <button type="submit">Войти</button>
+</form>
+
+<p>Или <a href="{% url 'admin:login' %}">войти через админку</a></p>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'journal/base.html' %}
+
+{% block title %}Выход - Цифровая редакция{% endblock %}
+
+{% block content %}
+<div class="logout-message">
+    <h1>Вы успешно вышли из системы</h1>
+    <p>Спасибо, что воспользовались нашей системой. Ждем вас снова!</p>
+    <div class="logout-links">
+        <a href="{% url 'login' %}" class="button">Войти снова</a>
+        <a href="{% url 'home' %}" class="button secondary">На главную</a>
+    </div>
+</div>
+
+<style>
+    .logout-message {
+        text-align: center;
+        padding: 40px 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .logout-message h1 {
+        color: #28a745;
+        margin-bottom: 20px;
+    }
+    
+    .logout-links {
+        margin-top: 30px;
+    }
+    
+    .logout-links a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .logout-links .button {
+        background: #007bff;
+        color: white;
+    }
+    
+    .logout-links .button.secondary {
+        background: #6c757d;
+        color: white;
+    }
+    
+    .logout-links a:hover {
+        opacity: 0.8;
+    }
+</style>
+{% endblock %}

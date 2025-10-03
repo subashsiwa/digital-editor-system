@@ -1,0 +1,30 @@
+{% extends 'journal/base.html' %}
+
+{% block title %}Создать статью - Цифровая редакция{% endblock %}
+
+{% block content %}
+<h1>Создать новую статью</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="id_title">Заголовок:</label>
+        {{ form.title }}
+    </div>
+    
+    <div class="form-group">
+        <label for="id_content">Содержание:</label>
+        {{ form.content }}
+    </div>
+    
+    <div class="form-group">
+        <label for="id_category">Рубрика:</label>
+        {{ form.category }}
+    </div>
+    
+    <button type="submit">Сохранить статью</button>
+</form>
+
+<a href="{% url 'dashboard' %}">Вернуться в личный кабинет</a>
+{% endblock %}
